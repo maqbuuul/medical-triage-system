@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  # MLflow Tracking Server
+  mlflow:
+    image: python:3.10-slim
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlruns
+      - ./artifacts:/artifacts
+    command: |
+      bash -c "
+        pip install mlflow>=2.5.0 &&
+        mlflow server --host 0.0.0.0 --port 5000 --default-artifact-root /artifacts
+      "
+    environment:
+      - MLFLOW_BACKEND_STORE_URI=sqlite:////mlruns/mlflow.db
+
+  # FastAPI Service
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./artifacts:/app/artifacts
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./logs:/app/logs
+    command: fastapi
+    depends_on:
+      - mlflow
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+
+  # Streamlit Dashboard
+  dashboard:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./artifacts:/app/artifacts
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./logs:/app/logs
+    command: streamlit
+    depends_on:
+      - api
+    environment:
+      - FASTAPI_URL=http://api:8000
+
+volumes:
+  mlruns:
+  artifacts:

@@ -141,3 +141,21 @@
 2025-08-10 23:07:37 - medical_triage - INFO - fastapi_app.py:359 - Prediction successful: daryeel guri (confidence: 0.927)
 2025-08-10 23:14:16 - medical_triage - INFO - fastapi_app.py:305 - Prediction request from 127.0.0.1
 2025-08-10 23:14:16 - medical_triage - INFO - fastapi_app.py:359 - Prediction successful: daryeel guri (confidence: 0.927)
+2025-08-10 23:26:54 - medical_triage - INFO - fastapi_app.py:305 - Prediction request from 127.0.0.1
+2025-08-10 23:26:54 - medical_triage - INFO - fastapi_app.py:359 - Prediction successful: daryeel guri (confidence: 0.927)
+2025-08-10 23:27:29 - medical_triage - INFO - fastapi_app.py:305 - Prediction request from 127.0.0.1
+2025-08-10 23:27:29 - medical_triage - INFO - fastapi_app.py:359 - Prediction successful: daryeel guri (confidence: 0.927)
+2025-08-10 23:29:02 - medical_triage - INFO - fastapi_app.py:305 - Prediction request from 127.0.0.1
+2025-08-10 23:29:02 - medical_triage - INFO - fastapi_app.py:359 - Prediction successful: bukaan socod (confidence: 0.454)
+2025-08-10 23:33:29 - medical_triage - INFO - logging_config.py:50 - Logging initialized at level: INFO
+2025-08-10 23:33:31 - medical_triage - INFO - fastapi_app.py:127 - Loaded model from: models\final_model.pkl
+2025-08-10 23:33:31 - medical_triage - INFO - fastapi_app.py:133 - Loaded preprocessor from: models\preprocessor.pkl
+2025-08-10 23:33:31 - medical_triage - INFO - fastapi_app.py:139 - Loaded label encoder from: models\label_encoder.pkl
+2025-08-10 23:33:31 - medical_triage - INFO - fastapi_app.py:151 - Loaded sample data for tips matching
+2025-08-10 23:33:31 - medical_triage - INFO - fastapi_app.py:153 - All model artifacts loaded successfully
+2025-08-10 23:33:46 - medical_triage - INFO - logging_config.py:50 - Logging initialized at level: INFO
+2025-08-10 23:33:47 - medical_triage - INFO - fastapi_app.py:127 - Loaded model from: models\final_model.pkl
+2025-08-10 23:33:48 - medical_triage - INFO - fastapi_app.py:133 - Loaded preprocessor from: models\preprocessor.pkl
+2025-08-10 23:33:48 - medical_triage - INFO - fastapi_app.py:139 - Loaded label encoder from: models\label_encoder.pkl
+2025-08-10 23:33:48 - medical_triage - INFO - fastapi_app.py:151 - Loaded sample data for tips matching
+2025-08-10 23:33:48 - medical_triage - INFO - fastapi_app.py:153 - All model artifacts loaded successfully
